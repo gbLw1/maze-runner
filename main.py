@@ -1,3 +1,4 @@
+from curses import wrapper
 
 maze = [
     ["#", "O", "#", "#", "#", "#", "#", "#", "#"],
@@ -10,3 +11,13 @@ maze = [
     ["#", " ", " ", " ", " ", " ", " ", " ", "#"],
     ["#", "#", "#", "#", "#", "#", "#", "X", "#"]
 ]
+
+
+def main(stdscr):
+    stdscr.clear()
+    stdscr.addstr(5, 10, "Welcome to the maze game!\n")
+    stdscr.refresh()
+    stdscr.getch()
+
+
+wrapper(main)
